@@ -54,9 +54,14 @@ sudo service docker start
 sudo usermod -aG docker ec2-user
 
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
+
 sudo curl -SL https://github.com/docker/compose/releases/download/v5.1.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 docker compose version
+
+sudo curl -SL https://github.com/docker/buildx/releases/download/v0.32.1/buildx-v0.32.1.linux-amd64 -o /usr/local/lib/docker/cli-plugins/docker-buildx
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-buildx
+docker buildx version
 ```
 
 ### clone YOUR repo
