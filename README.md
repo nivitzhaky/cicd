@@ -69,6 +69,12 @@ docker buildx version
 sudo git clone https://github.com/nivitzhaky/cicd.git
 ```
 
-> **Note:** use `docker compose` (no hyphen) — that is the v2 plugin installed above.
-> The old `docker-compose` v1 binary may still exist on the system and will not work.
+### add inbound rule 
+TCP port 8000  mask 0.0.0.0/0
 
+```sh
+cd cicd\
+sudo docker compose up -d
+```
+
+test machineip:8080
