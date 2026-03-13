@@ -20,6 +20,7 @@ jobs:
             sudo chown -R ec2-user:ec2-user /home/ec2-user/cicd &&
             cd cicd &&
             git pull &&
+            sudo rm -rf postgres_data &&
             docker compose up --build -d
           "
           rm -f key.pem
