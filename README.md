@@ -43,3 +43,27 @@ The API will be available at http://localhost:8000.
 docker build -t todo-api:latest .
 ```
 
+## Create EC2 Intance
+download PEM and save as repository secrect
+
+### install docker and git
+```sh
+sudo yum update -y
+sudo yum install -y docker git
+sudo service docker start
+sudo usermod -aG docker ec2-user
+
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+sudo curl -SL https://github.com/docker/compose/releases/download/v5.1.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+docker compose version
+```
+
+### clone YOUR repo
+```sh
+sudo git clone https://github.com/nivitzhaky/cicd.git
+```
+
+> **Note:** use `docker compose` (no hyphen) — that is the v2 plugin installed above.
+> The old `docker-compose` v1 binary may still exist on the system and will not work.
+
