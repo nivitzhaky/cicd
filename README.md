@@ -101,7 +101,10 @@ wait for verification (can take long time)
 origin type -> public DNS of your Ec2 <br>
 edit origin change to http only and put port 8000 <br>
 in behaviours -> cache policy -> CachingDisabled <br>
-
+### Route53
+Hosted zoned -> your domain -> create record <br>
+A record -> alias to cloudfront -> choose the cloudfront <br>
+CMANE -> www -> no alias -> put your cloudfront url <br>
 
 
 
