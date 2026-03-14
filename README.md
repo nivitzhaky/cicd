@@ -73,13 +73,26 @@ sudo git clone https://github.com/nivitzhaky/cicd.git
 TCP port 8000  mask 0.0.0.0/0
 
 ```sh
-cd cicd\
+cd cicd
 sudo docker compose up -d
 ```
 ### test
-test machineip:8080
+test machineip:8000
 
 ### change H1 title 
 commit and push and test again
+
+### buy a xyz domain on godaddy
+do not take any protection <br>
+choose one year <br>
+goto: https://account.godaddy.com/myrenewals <br>
+choose cancel plan
+### create hosted zone in AWS
+https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1#
+### copy records to godaddy
+https://account.godaddy.com/products <br>
+DNS <br>
+update nameservers from aws
+### ACM request AWS
 
 
