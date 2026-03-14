@@ -94,5 +94,15 @@ https://account.godaddy.com/products <br>
 DNS <br>
 update nameservers from aws
 ### ACM request AWS
+ask for domain.name and *.domain.name <br>
+click create records in Route53 <br>
+wait for verification (can take long time) 
+### Cloudfront
+origin type -> public DNS of your Ec2 <br>
+edit origin change to http only and put port 8000 <br>
+in behaviours -> cache policy -> CachingDisabled <br>
+
+
+
 
 
