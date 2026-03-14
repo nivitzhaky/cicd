@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "$PEM_FILE" > key.pem
           chmod 600 key.pem
-          ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@98.81.248.45 "
+          ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@54.242.44.208 "
             cd cicd &&
             sudo git pull &&
             sudo docker compose up --build -d
